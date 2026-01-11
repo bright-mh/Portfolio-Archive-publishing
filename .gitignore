@@ -1,0 +1,8 @@
+# Large files exceeding GitHub's 100MB limit
+project/2014/hyundai/front/data_file/ipark_innovation_kor.zip
+
+# Other large files that might cause issues
+*.zip
+*.7z
+*.rar
+*.tar.gz
