@@ -6,3 +6,6 @@ project/2014/hyundai/front/data_file/ipark_innovation_kor.zip
 *.7z
 *.rar
 *.tar.gz
+
+# macOS Finder metadata
+.DS_Store
