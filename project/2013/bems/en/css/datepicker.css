@@ -17,10 +17,9 @@
   /*.dow {
     border-top: 1px solid #ddd !important;
   }*/
-
 }
 .datepicker:before {
-  content: '';
+  content: "";
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
@@ -31,7 +30,7 @@
   left: 6px;
 }
 .datepicker:after {
-  content: '';
+  content: "";
   display: inline-block;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;

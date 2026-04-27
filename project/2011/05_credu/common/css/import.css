@@ -4,7 +4,7 @@
 		credu 외국어 학습의 모든것의 CSS를 IMPORT 합니다
 *******************************************************************/
 
-@import "reset.css";						/* 리셋 */
-@import "layout.css";						/* 레이아웃 */
-@import "contents.css";						/* 컨텐츠 */
-@import "contents2.css";					/* 컨텐츠 */
+@import "reset.css"; /* 리셋 */
+@import "layout.css"; /* 레이아웃 */
+@import "contents.css"; /* 컨텐츠 */
+@import "contents2.css"; /* 컨텐츠 */

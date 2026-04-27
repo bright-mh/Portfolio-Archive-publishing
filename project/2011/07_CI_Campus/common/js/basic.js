@@ -1,40 +1,37 @@
-$(document).ready(function() {
-	$('.si_box').css('display', 'none');
+$(document).ready(function () {
+  $(".si_box").css("display", "none");
 });
 
-/* ¸ÞÀÎ ¹Ù·Î°¡±â list */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½Ù·Î°ï¿½ï¿½ï¿½ list */
 function short_cut(a) {
-	if (a == "01") {
-		$('.short_cut_list a').removeClass("on");
-		$('.short_cut_list_01 a').addClass("on");
-		$('.short_cut_details > ul').animate({top:0},500);
-	}
-	else if (a == "02") {
-		$('.short_cut_list a').removeClass("on");
-		$('.short_cut_list_02 a').addClass("on");
-		$('.short_cut_details > ul').animate({top:-93},500);
-	}
-	else if (a == "03") {
-		$('.short_cut_list a').removeClass("on");
-		$('.short_cut_list_03 a').addClass("on");
-		$('.short_cut_details > ul').animate({top:-186},500);
-	}
-	else if (a == "04") {
-		$('.short_cut_list a').removeClass("on");
-		$('.short_cut_list_04 a').addClass("on");
-		$('.short_cut_details > ul').animate({top:-279},500);
-	}
+  if (a == "01") {
+    $(".short_cut_list a").removeClass("on");
+    $(".short_cut_list_01 a").addClass("on");
+    $(".short_cut_details > ul").animate({ top: 0 }, 500);
+  } else if (a == "02") {
+    $(".short_cut_list a").removeClass("on");
+    $(".short_cut_list_02 a").addClass("on");
+    $(".short_cut_details > ul").animate({ top: -93 }, 500);
+  } else if (a == "03") {
+    $(".short_cut_list a").removeClass("on");
+    $(".short_cut_list_03 a").addClass("on");
+    $(".short_cut_details > ul").animate({ top: -186 }, 500);
+  } else if (a == "04") {
+    $(".short_cut_list a").removeClass("on");
+    $(".short_cut_list_04 a").addClass("on");
+    $(".short_cut_details > ul").animate({ top: -279 }, 500);
+  }
 }
 
-$(document).ready(function() {
-/* ¸ÞÀÎ ·¹ÀÌ¾î ÆË¾÷ º¸ÀÌ±â */
-	$('.si_list p.btn a').click(function() {
-		$('.si_box').css('display', 'none');
-		$(this).parent().next().css('display','block');
-	});
+$(document).ready(function () {
+  /* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½Ë¾ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ */
+  $(".si_list p.btn a").click(function () {
+    $(".si_box").css("display", "none");
+    $(this).parent().next().css("display", "block");
+  });
 
-/* ¸ÞÀÎ ·¹ÀÌ¾î ÆË¾÷ ´Ý±â */
-	$('.si_list p.btn_close a').click(function() {
-		$('.si_box').css('display', 'none');
-	});
+  /* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½Ë¾ï¿½ ï¿½Ý±ï¿½ */
+  $(".si_list p.btn_close a").click(function () {
+    $(".si_box").css("display", "none");
+  });
 });

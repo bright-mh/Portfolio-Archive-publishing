@@ -4,5 +4,5 @@
 		삼성 CI Campus의 CSS를 IMPORT 합니다
 *******************************************************************/
 
-@import "reset.css";						/* 리셋 */
-@import "contents.css";						/* 컨텐츠 */
+@import "reset.css"; /* 리셋 */
+@import "contents.css"; /* 컨텐츠 */

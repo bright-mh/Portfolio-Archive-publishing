@@ -30,13 +30,13 @@
   shape-rendering: auto;
 }
 .tui-chart .tui-chart-icon {
-  background-color: '#f4f4f4';
+  background-color: "#f4f4f4";
 }
 .tui-chart .tui-chart-icon:hover {
-  background-color: '#eeeeee';
+  background-color: "#eeeeee";
 }
 .tui-chart .tui-chart-icon:active {
-  background-color: '#e5e5e5';
+  background-color: "#e5e5e5";
 }
 .tui-chart .tui-chart-title {
   position: absolute;
@@ -464,7 +464,7 @@
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEXm5ubm5uZVVVXl5eUH/eecAAAAAnRSTlO0tU0x4YcAAAAwSURBVAjXY6hh+AOGb4Dw/weGfx9AJBb0/z8O/BeV/x4HjcDYqH/7ieUhU/Ug8g8ALeuSuXF73FYAAAAASUVORK5CYII=);
 }
 .tui-chart .tui-chart-chartExportMenu-area.menu-opened .tui-chart-chartExportMenu-button {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAAGXcA1uAAAAAXNSR0IArs4c6QAAAU5JREFUSA3NVTuOhDAMNSMEDeICnI6CK1AhGqi4Apegmb0RHABBAULaxZl1FJPPDEisNlJix37Pjp0IYJ7n5zRN3zg9XLquAxwPsf4uwkMG5mEbBiM4SoZK01T6rAyrg4WScdQc4zgCThqSsZcHOGn4pERRRKqQ1uRWB6MrG5lbsTlVjYCVYMeGYRBSrQwjaQRn+N15fw2nMnie93WKcKno013SCEVRyM6qOhnlYyIDShOQ/MaisywT/rZtCSelRjhGr+taglHRakAjgo5AtOPQMrzM9tWYwQ63HMlFOH0kVzCT73QJpiAu2/9IsK6r8ZA2uwo2Pm0CLMsCVVVB3/eQJAnkeQ5xHIsvcNM00l6WJQRBQDQmP7pk/PBRQN/3Yds2lpBFPGxuvwNnBX/WIrxMU4/xAGEYHprCt84KOPTa7vY7eOCv5NrZ3rP22M8fyPG11kibO+MAAAAASUVORK5CYII=');
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAAGXcA1uAAAAAXNSR0IArs4c6QAAAU5JREFUSA3NVTuOhDAMNSMEDeICnI6CK1AhGqi4Apegmb0RHABBAULaxZl1FJPPDEisNlJix37Pjp0IYJ7n5zRN3zg9XLquAxwPsf4uwkMG5mEbBiM4SoZK01T6rAyrg4WScdQc4zgCThqSsZcHOGn4pERRRKqQ1uRWB6MrG5lbsTlVjYCVYMeGYRBSrQwjaQRn+N15fw2nMnie93WKcKno013SCEVRyM6qOhnlYyIDShOQ/MaisywT/rZtCSelRjhGr+taglHRakAjgo5AtOPQMrzM9tWYwQ63HMlFOH0kVzCT73QJpiAu2/9IsK6r8ZA2uwo2Pm0CLMsCVVVB3/eQJAnkeQ5xHIsvcNM00l6WJQRBQDQmP7pk/PBRQN/3Yds2lpBFPGxuvwNnBX/WIrxMU4/xAGEYHprCt84KOPTa7vY7eOCv5NrZ3rP22M8fyPG11kibO+MAAAAASUVORK5CYII=");
 }
 .tui-chart .tui-chart-chartExportMenu-area.menu-opened .tui-chart-chartExportMenu-button:hover {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAFlXhBdAAAAIVBMVEXu7u7u7u5VVVVZWVlvb2+hoaHV1dXh4eHn5+fo6Oju7u75trgQAAAAAnRSTlO0tU0x4YcAAABlSURBVBjTY5BawLA0AIRWLYChVasYVi1aBaFhuByI06A0RAyFKkqqQqJWoStZiE0QRHktAVMuLmBqsRUyDyqHVR8CEOCsBCMIZ4WT+3InT5jMcicj91XYOKjKgLpXELBHCsFeAACm5rR2c72cZwAAAABJRU5ErkJggg==);
@@ -681,15 +681,30 @@
   display: inline-block;
   height: 10px;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip > .tui-chart-tooltip-body span.tui-chart-legend-rect {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip
+  > .tui-chart-tooltip-body
+  span.tui-chart-legend-rect {
   width: 10px;
   margin-right: 8px;
   vertical-align: text-top;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip > .tui-chart-tooltip-body span.tui-chart-legend-rect.line {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip
+  > .tui-chart-tooltip-body
+  span.tui-chart-legend-rect.line {
   padding: 0;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip > .tui-chart-tooltip-body .tui-chart-tooltip-value {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip
+  > .tui-chart-tooltip-body
+  .tui-chart-tooltip-value {
   padding-left: 44px;
   text-align: right;
 }
@@ -707,32 +722,63 @@
 .tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip > table tr {
   padding-bottom: 5px;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip > table tr:last-child {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip.tui-chart-group-tooltip
+  > table
+  tr:last-child {
   padding-bottom: 0;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip > .tui-chart-tooltip-body {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip.tui-chart-group-tooltip
+  > .tui-chart-tooltip-body {
   padding: 11px 15px;
   font-size: 12px;
   font-weight: lighter;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip > .tui-chart-tooltip-body > span {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip.tui-chart-group-tooltip
+  > .tui-chart-tooltip-body
+  > span {
   display: inline-block;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip > .tui-chart-tooltip-body .tui-chart-tooltip-value {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip.tui-chart-group-tooltip
+  > .tui-chart-tooltip-body
+  .tui-chart-tooltip-value {
   padding-left: 44px;
   text-align: right;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip .tui-chart-legend-rect {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip.tui-chart-group-tooltip
+  .tui-chart-legend-rect {
   position: relative;
   left: 0px;
   top: -2px;
   margin-right: 5px;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip > .tui-chart-tooltip-head {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip.tui-chart-group-tooltip
+  > .tui-chart-tooltip-head {
   padding: 8px 15px;
   text-align: left;
 }
-.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip > .tui-chart-tooltip-type {
+.tui-chart
+  .tui-chart-tooltip-area
+  .tui-chart-tooltip
+  .tui-chart-default-tooltip.tui-chart-group-tooltip
+  > .tui-chart-tooltip-type {
   padding-left: 7px;
 }
 .tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip .hide {

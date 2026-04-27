@@ -1,6 +1,48 @@
 @charset "utf-8";
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -9,23 +51,30 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   font-size: 100%;
   font-family: inherit;
   vertical-align: baseline;
-  font-size:12px;
-  font-family:"돋움",Dotum,Helvetica,AppleGothic,Sans-serif;
-  color:#858585
+  font-size: 12px;
+  font-family: "돋움", Dotum, Helvetica, AppleGothic, Sans-serif;
+  color: #858585;
 }
 
 table {
   border-collapse: separate;
   border-spacing: 0;
 }
-caption, th, td {
+caption,
+th,
+td {
   text-align: left;
   font-weight: normal;
 }
-table, td, th {
+table,
+td,
+th {
   vertical-align: middle;
 }
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
 }
 blockquote {
@@ -35,12 +84,17 @@ a img {
   border: none;
 }
 
-a{
-  text-decoration:none;
+a {
+  text-decoration: none;
 }
 
-ol, ul, dl {list-style:none}
+ol,
+ul,
+dl {
+  list-style: none;
+}
 
-a, input { 
-    word-wrap:expression( this.style.wordWrap="normal",this.hideFocus=true); 
+a,
+input {
+  word-wrap: expression(this.style.wordWrap= "normal", this.hideFocus=true);
 }

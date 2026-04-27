@@ -1,82 +1,75 @@
 /**
-*  Jquery floater ·¹ÀÌ¾î¸¦ Ç×»ó È­¸é¿¡ ¶°ÀÖ°Å³ª µû¶ó ´Ù´Ïµµ·Ï Ã³¸®
-*
-* options
-*
-*  allwaysTop : true ,  Ç×»ó À§ false µû¶ó´Ù´Ïµµ·Ï
-*  speed  : 1000  µû¶ó´Ù´Ï´Â ¼Óµµ
-*  bottom : false Ç×»ó ÇÏ´Ü¿¡
-*  default_x : Áß¾ÓÁ¤·ÄÀÏ¶§ ¿¤¸®¸ÕÆ® ¿·¿¡ Äü¸Þ´º ºÙÈ÷±â*
-*/
-(function($) {
+ *  Jquery floater ï¿½ï¿½ï¿½Ì¾î¸¦ ï¿½×»ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½Ö°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù´Ïµï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
+ *
+ * options
+ *
+ *  allwaysTop : true ,  ï¿½×»ï¿½ ï¿½ï¿½ false ï¿½ï¿½ï¿½ï¿½Ù´Ïµï¿½ï¿½ï¿½
+ *  speed  : 1000  ï¿½ï¿½ï¿½ï¿½Ù´Ï´ï¿½ ï¿½Óµï¿½
+ *  bottom : false ï¿½×»ï¿½ ï¿½Ï´Ü¿ï¿½
+ *  default_x : ï¿½ß¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*
+ */
+(function ($) {
+  $.extend($.fn, {
+    Floater: function (setting) {
+      var options = $.extend($.fn.Floater.defaults, setting);
+      var box = this;
+      var initTop = options.initTop;
 
-	$.extend($.fn, {
-		Floater : function(setting)
-		{
-			var options = $.extend($.fn.Floater.defaults, setting);
-			var box   = this;
-			var initTop = options.initTop;
+      if (options.bottom) {
+        bottom_pos = $(window).height() - $(box).height() - initTop;
+        $(box).css("top", bottom_pos);
+        initTop = bottom_pos;
+      }
 
-			if(options.bottom) {
-				bottom_pos = $(window).height() - $(box).height() - initTop;
-				$(box).css('top' , bottom_pos);
-				initTop = bottom_pos;
-			}
+      if (options.default_x) {
+        box.css("left", getX($(options.default_x)));
+        if (box.css("display") == "none") box.css("display", "block");
 
-			if(options.default_x) {
-				box.css('left' , getX($(options.default_x)) );
-				if(box.css('display')=='none') box.css('display','block');
+        $(window).bind("resize", function () {
+          box.css("left", getX($(options.default_x)));
+        });
+      }
 
-				$(window).bind('resize', function() {
-					box.css('left' , getX($(options.default_x)));
-				});
+      var prevTop = initTop;
 
-			}
+      $(window).bind("scroll", function (e) {
+        adjustTop();
+      });
 
-			var prevTop = initTop;
+      function getX(el) {
+        return el.get(0).offsetLeft + el.width();
+      }
 
-			$(window).bind('scroll', function(e){adjustTop();});
+      function adjustTop() {
+        var newTop = computeTop();
+        if (newTop <= initTop) newTop = initTop;
+        if (prevTop != newTop) {
+          layerMove(newTop);
+          prevTop = newTop;
+        }
+      }
 
-			function getX(el)
-			{
-				return el.get(0).offsetLeft + el.width();
-			};
+      function layerMove(dest) {
+        if (options.alwaysTop) {
+          //var posx=$(window).scrollLeft() + $(window).width() - $(box).width();
+          $(box).css({ top: dest });
+        } else {
+          $(box).stop();
+          $(box).animate({ top: dest }, { duration: options.speed });
+        }
+      }
 
-			function adjustTop()
-			{
-				var newTop = computeTop();
-				if (newTop <= initTop) newTop = initTop;
-				if (prevTop != newTop) {
-					layerMove(newTop);
-					prevTop = newTop;
-				}
-			};
+      function computeTop() {
+        return $(window).scrollTop() + initTop;
+      }
+    },
+  });
 
-			function layerMove(dest)
-			{
-				if(options.alwaysTop) {
-					//var posx=$(window).scrollLeft() + $(window).width() - $(box).width();
-					$(box).css({'top': dest});
-				}else{
-					$(box).stop();
-					$(box).animate({'top': dest},{'duration':options.speed});
-				}
-			};
-
-			function computeTop()
-			{
-				return $(window).scrollTop() + initTop;
-			};
-		}
-
-	});
-
-	$.fn.Floater.defaults = {
-		'alwaysTop' : true ,
-		'bottom'    : false ,
-		'default_x' : false ,
-		'initTop'   : 50 ,
-		'speed' : 30
-	};
-
+  $.fn.Floater.defaults = {
+    alwaysTop: true,
+    bottom: false,
+    default_x: false,
+    initTop: 50,
+    speed: 30,
+  };
 })(jQuery);
