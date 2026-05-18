@@ -112,8 +112,6 @@ function scrollSmooth(value, minusNum) {
 	return false;
 }
 
-
-
 // detailed tasks 더보기 토글
 function detailedTasksInit() {
 	var MAX_HEIGHT = 300;
@@ -153,13 +151,13 @@ function detailedTasksInit() {
 $(window).load(function() {
 	layoutInit();
 	nav.menuClick();
-	nav.mobileSticky();
 	btnTop.scroll();
 	btnTop.btnClick();
 	detailedTasksInit();
 	// detailedTasksInit()으로 높이가 바뀐 후 그룹 위치·높이 재계산
 	nav.scrollTop();
 	nav.scrollEffect();
+	nav.mobileSticky(); // scrollEffect 이후 호출해야 모바일 초기 on 클래스가 유지됨
 });
 
 // window.scroll
