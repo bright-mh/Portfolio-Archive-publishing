@@ -31,12 +31,24 @@
 .mo .box .thumbnail {order:-1;width:100%;height:auto;}
 .mo .box dl {margin-top:12px;}
 .mo .box dl:first-child {margin-top:24px;}
-.mo .box dt {color:#000;font-size:12px;font-weight:700;line-height:1;}
+.mo .box dt {color:#000;font-weight:700;line-height:1;}
 .mo .box dd {line-height:28px;}
-.mo .box .feature {margin-top:15px;}
-.mo .box .feature dt {padding-bottom:3px;}
-.mo .box .feature dd {position:relative;margin-left:5px;padding-left:5px;text-indent:-5px;line-height:20px;}
-.mo .box .feature dd:before {content:'-';display:inline-block;margin-right:5px;line-height:20px;}
+.mo .box .feature, .mo .box .achievements {margin-top:15px;}
+.mo .box .feature dt, .mo .box .achievements dt {padding-bottom:3px;}
+.mo .box .feature dd, .mo .box .achievements dd {position:relative;margin-left:5px;padding-left:5px;text-indent:-5px;line-height:20px;}
+.mo .box .feature dd:before, .mo .box .achievements dd:before {content:'-';display:inline-block;margin-right:5px;line-height:20px;}
+.mo .box .detailed-tasks {position:relative;}
+.mo .box .detailed-tasks.is-collapsed {max-height:300px;overflow:hidden;}
+.pc .box .detailed-tasks.is-collapsed::after {content:'';display:block;position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));}
+.mo .box .detailed-tasks-more {display:inline-block;margin-top:10px;padding:5px 14px;border:1px solid #ccc;border-radius:20px;color:#555;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:0.02em;transition:all 0.2s;}
+.mo .box .detailed-tasks-more:hover {border-color:#333;color:#333;}
+.mo .box .detailed-tasks dd {margin-top:40px;color:#555;line-height:1.5;}
+.mo .box .detailed-tasks dd:first-of-type {margin-top:10px;}
+.mo .box .detailed-tasks-title {font-weight:700;}
+.mo .box .detailed-tasks-field-title {display:block;margin-top:12px;color:#777;font-weight:500;}
+.mo .box .detailed-tasks-achievements-list li {padding-left:4px;margin-left:4px;margin-top:5px;text-indent:-4px;line-height:20px;}
+.mo .box .detailed-tasks-achievements-list li:first-child {margin-top:0;}
+.mo .box .detailed-tasks-achievements-list li:before {content:'-';display:inline-block;margin-right:4px;}
 
 .mo .btn_top {display:none;position:fixed;bottom:10px;right:10px;padding:10px;background:#999;border-radius:5px;color:#fff;font-size:12px;font-weight:700;border:1px solid #999;line-height:1;z-index:1;}
 .mo .bg_top,
@@ -66,8 +78,20 @@
 .pc .box dt {margin-bottom:5px;color:#000;font-weight:700;line-height:1;}
 .pc .box dd {color:#333;font-weight:300;line-height:20px;}
 .pc .box .work {margin-top:28px;}
-.pc .box .feature dd {margin-left:4px;padding-left:4px;text-indent:-4px;}
-.pc .box .feature dd:before {content:'-';display:inline-block;margin-right:4px;}
+.pc .box .feature dd, .pc .box .achievements dd {padding-left:4px;margin-left:4px;text-indent:-4px;}
+.pc .box .feature dd:before, .pc .box .achievements dd:before {content:'-';display:inline-block;margin-right:4px;}
+.pc .box .detailed-tasks {position:relative;}
+.pc .box .detailed-tasks.is-collapsed {max-height:300px;overflow:hidden;}
+.pc .box .detailed-tasks.is-collapsed::after {content:'';display:block;position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));}
+.pc .box .detailed-tasks-more {display:inline-block;margin-top:10px;padding:5px 14px;border:1px solid #ccc;border-radius:20px;color:#555;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:0.02em;transition:all 0.2s;}
+.pc .box .detailed-tasks-more:hover {border-color:#333;color:#333;}
+.pc .box .detailed-tasks dd {margin-top:40px;color:#555;}
+.pc .box .detailed-tasks dd:first-of-type {margin-top:10px;}
+.pc .box .detailed-tasks-title {color:#333;font-weight:700;}
+.pc .box .detailed-tasks-field-title {display:block;margin-top:12px;color:#777;font-weight:500;}
+.pc .box .detailed-tasks-achievements-list li {padding-left:4px;margin-left:4px;margin-top:5px;text-indent:-4px;line-height:20px;}
+.pc .box .detailed-tasks-achievements-list li:first-child {margin-top:0;}
+.pc .box .detailed-tasks-achievements-list li:before {content:'-';display:inline-block;margin-right:4px;}
 
 .pc .linefd {display:block;}
 .pc .btn_top {display:none;position:fixed;bottom:50px;right:30px;padding:10px;background:#999;border-radius:5px;color:#fff;font-size:12px;font-weight:700;border:1px solid #999;z-index:1;}

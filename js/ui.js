@@ -86,7 +86,6 @@ var nav = {
 			menuList.each(function(idx) {
 				var listPosition = Math.round(menuList.eq(idx).offset().left);
 				mobileMenuWeight[idx] = listPosition;
-				//console.log(mobileMenuWeight[idx])
 			})
 		}
 	}
@@ -103,7 +102,6 @@ var btnTop = {
 		} else {
 			btnTop.fadeOut();
 		}
-		//console.log(fromTop);
 	},
 	btnClick : function() {
 		var btnTop = $('.btn_top');
@@ -124,15 +122,53 @@ function scrollSmooth(value, minusNum) {
 
 
 
+// detailed tasks 더보기 토글
+function detailedTasksInit() {
+	var MAX_HEIGHT = 300;
+
+	$('.detailed-tasks').each(function() {
+		var $dl = $(this);
+		var naturalHeight = $dl.outerHeight();
+
+		if (naturalHeight <= MAX_HEIGHT) return;
+
+		$dl.addClass('is-collapsed');
+
+		var $btn = $('<span class="detailed-tasks-more">더보기 +</span>');
+		$dl.after($btn);
+
+		$btn.on('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			if ($dl.hasClass('is-collapsed')) {
+				$dl.removeClass('is-collapsed');
+				$(this).text('접기 -');
+			} else {
+				$dl.addClass('is-collapsed');
+				$(this).text('더보기 +');
+				$('.btn_top').trigger('click');
+			}
+
+			// 높이 변화 후 그룹 위치·높이 재계산 및 메뉴 on 클래스 갱신
+			nav.scrollTop();
+			nav.scrollEffect();
+		});
+	});
+}
+
 // document ready
 $(window).load(function() {
 	layoutInit();
-	nav.scrollTop();
 	nav.mobileMenuSetting();
 	nav.menuClick();
 	nav.mobileSticky();
 	btnTop.scroll();
 	btnTop.btnClick();
+	detailedTasksInit();
+	// detailedTasksInit()으로 높이가 바뀐 후 그룹 위치·높이 재계산
+	nav.scrollTop();
+	nav.scrollEffect();
 });
 
 // window.scroll
