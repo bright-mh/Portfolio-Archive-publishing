@@ -13,7 +13,6 @@ function layoutInit() {
 // nav
 var groupTop = [];
 var groupHeight = [];
-var mobileMenuWeight = [];
 
 var nav = {
 	scrollTop : function() {
@@ -43,6 +42,7 @@ var nav = {
 	},
 	scrollEffect : function() {
 		var menuList = $('.menu li');
+		var $menu = $('.menu');
 
 		menuList.each(function(idx) {
 			var fromTop = $(window).scrollTop();
@@ -56,7 +56,9 @@ var nav = {
 			} else if ($('body').hasClass('mo')) {
 				if (groupTop[idx] - 68 <= fromTop && groupTop[idx] + groupHeight[idx] - 68 > fromTop) {
 					$(this).addClass('on');
-					$('.menu').scrollLeft(mobileMenuWeight[idx] - 30);
+					// 컨테이너 기준 아이템 위치를 매번 실시간으로 계산
+					var itemLeft = Math.round($(this).offset().left) - Math.round($menu.offset().left) + $menu.scrollLeft();
+					$menu.scrollLeft(itemLeft);
 				} else {
 					$(this).removeClass('on');
 				}
@@ -77,16 +79,6 @@ var nav = {
 			} else if (fromTop <= 116) {
 				$('.mo .menu li').eq(0).addClass('on');
 			}
-		}
-	},
-	mobileMenuSetting : function() {
-		var menuList = $('.menu li');
-
-		if ($('body').hasClass('mo')) {
-			menuList.each(function(idx) {
-				var listPosition = Math.round(menuList.eq(idx).offset().left);
-				mobileMenuWeight[idx] = listPosition;
-			})
 		}
 	}
 }
@@ -160,7 +152,6 @@ function detailedTasksInit() {
 // document ready
 $(window).load(function() {
 	layoutInit();
-	nav.mobileMenuSetting();
 	nav.menuClick();
 	nav.mobileSticky();
 	btnTop.scroll();
@@ -181,7 +172,6 @@ $(window).scroll(function() {
 // window resize
 $(window).resize(function() {
 	layoutInit();
-	nav.mobileMenuSetting();
 	nav.scrollTop();
 	nav.scrollEffect();
 	nav.mobileSticky();
